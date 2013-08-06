@@ -24,10 +24,20 @@ public class Main {
         GameGrid canvas = new GameGrid(GRID_SIZE);
         canvas.showGrid();
 
-        int turn = 1;
+        int turn = 0;
+        char turnSelect = 'x';
 
-        for (int pc = 0; pc < (GRID_SIZE * GRID_SIZE); pc++) {
-            System.out.println(Players[turn] + ", your turn.");
+        for (int setLine = 0; setLine < GRID_SIZE; setLine++) {
+            for (int setCell = 0; setCell < GRID_SIZE; setCell++) {
+                System.out.println(Players[turn] + ", your turn.");
+
+                canvas.showGrid();
+                canvas.setGridCell(setLine, setCell, turnSelect);
+
+                turn = (turn == 0) ? 1 : 0;
+                turnSelect = (turnSelect == 'x') ? 'o' : 'x';
+            }
+
 
         }
     }

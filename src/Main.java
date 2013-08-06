@@ -15,13 +15,13 @@ public class Main {
         Scanner scanner1 = new Scanner(System.in);
 
         System.out.println("Player 1. Please enter your name:");
-//        String a0 = scanner.nextLine();
         player1.setPlayerName(scanner.nextLine());
         System.out.println("Player 2. Please enter your name:");
         player2.setPlayerName(scanner.nextLine());
 
-        System.out.println(player1.getPlayerName() + " - " + player2.getPlayerName());
-//      Test line
+        System.out.println("[x] " + player1.getPlayerName() + " >> VS << " + player2.getPlayerName() + " [o]");
 
+        GameCanvas canvas = new GameCanvas(3);
+        canvas.showGrid();
     }
 }

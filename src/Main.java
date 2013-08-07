@@ -31,11 +31,11 @@ public class Main {
             for (int setCell = 0; setCell < GRID_SIZE; setCell++) {
                 System.out.println(Players[turn] + ", your turn.");
 
-                canvas.showGrid();
-                canvas.setGridCell(setLine, setCell, turnSelect);
-
                 turn = (turn == 0) ? 1 : 0;
                 turnSelect = (turnSelect == 'x') ? 'o' : 'x';
+
+                canvas.setGridCell(setLine, setCell, turnSelect);
+                canvas.showGrid();
             }
 
 

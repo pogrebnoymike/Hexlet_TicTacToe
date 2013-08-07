@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Game game = new Game();
+
         final int GRID_SIZE = 3;
         final int NUMBER_OF_PLAYERS = 2;
 
@@ -36,10 +38,7 @@ public class Main {
 
                 canvas.setGridCell(setLine, setCell, turnSelect);
                 canvas.showGrid();
-                System.out.println("WTF!!!");
             }
-
-
         }
     }
 }

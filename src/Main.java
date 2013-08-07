@@ -36,7 +36,7 @@ public class Main {
 
                 canvas.setGridCell(setLine, setCell, turnSelect);
                 canvas.showGrid();
-//                Test by Mike
+//                Test by Mike1
             }
 
 

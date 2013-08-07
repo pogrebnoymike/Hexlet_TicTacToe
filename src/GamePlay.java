@@ -8,13 +8,13 @@ import java.util.Scanner;
  * To change this template use File | Settings | File Templates.
  */
 public class GamePlay {
-    private String playerChoices = "0";
+    private String playerChoices = "";
 
     public String getPlayerChoices() {
         return playerChoices;
     }
 
-    public void setPlayerChoices(String playerChoices) {
-        this.playerChoices = playerChoices;
+    public void setPlayerChoices(String pChoices) {
+        playerChoices += pChoices;
     }
 }

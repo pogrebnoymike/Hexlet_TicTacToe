@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        final int GRID_SIZE = 3;
+        final int GRID_SIZE = 8;
         final int NUMBER_OF_PLAYERS = 2;
 
         String[] Players = new String[NUMBER_OF_PLAYERS];
@@ -25,13 +25,15 @@ public class Main {
         GameLegend canvas = new GameLegend(GRID_SIZE);
         canvas.showGrid();
 
-        int turn = 0;
-        String turnSelect = "x";
+//        int turn = 0;
+//        String turnSelect = "x";
 
-        System.out.println("Player 1, your turn ... ");
-        GamePlay move = new GamePlay();
-        move.setPlayerChoices(scanner.nextLine());
-        System.out.println(move.getPlayerChoices());
+//        System.out.println("Player 1, your turn ... ");
+//        GamePlay move = new GamePlay();
+//        move.setPlayerChoices(scanner.nextLine());
+//        move.setPlayerChoices(scanner.nextLine());
+//
+//        System.out.println(move.getPlayerChoices());
 //        for (int setLine = 0; setLine < GRID_SIZE; setLine++) {
 //            for (int setCell = 0; setCell < GRID_SIZE; setCell++) {
 //                System.out.println(Players[turn] + ", your turn.");

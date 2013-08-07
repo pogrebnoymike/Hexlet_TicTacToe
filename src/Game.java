@@ -6,17 +6,17 @@
  * To change this template use File | Settings | File Templates.
  */
 public class Game {
-    GameGrid gameGrid;
+    GameLegend gameLegend;
 
     public Game() {
-        this.gameGrid = new GameGrid();
+        this.gameLegend = new GameLegend();
     }
 
-    public GameGrid getGameGrid() {
-        return gameGrid;
+    public GameLegend getGameLegend() {
+        return gameLegend;
     }
 
-    public void setGameGrid(GameGrid gameGrid) {
-        this.gameGrid = gameGrid;
+    public void setGameLegend(GameLegend gameLegend) {
+        this.gameLegend = gameLegend;
     }
 }

@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Game game = new Game();
 
         final int GRID_SIZE = 3;
         final int NUMBER_OF_PLAYERS = 2;
@@ -23,22 +22,22 @@ public class Main {
 
         System.out.println();
 
-        GameGrid canvas = new GameGrid(GRID_SIZE);
+        GameLegend canvas = new GameLegend(GRID_SIZE);
         canvas.showGrid();
 
         int turn = 0;
-        char turnSelect = 'x';
+        String turnSelect = "x";
 
-        for (int setLine = 0; setLine < GRID_SIZE; setLine++) {
-            for (int setCell = 0; setCell < GRID_SIZE; setCell++) {
-                System.out.println(Players[turn] + ", your turn.");
-
-                turn = (turn == 0) ? 1 : 0;
-                turnSelect = (turnSelect == 'x') ? 'o' : 'x';
-
-                canvas.setGridCell(setLine, setCell, turnSelect);
-                canvas.showGrid();
-            }
-        }
+//        for (int setLine = 0; setLine < GRID_SIZE; setLine++) {
+//            for (int setCell = 0; setCell < GRID_SIZE; setCell++) {
+//                System.out.println(Players[turn] + ", your turn.");
+//
+//                turn = (turn == 0) ? 1 : 0;
+//                turnSelect = (turnSelect == "x") ? "o" : "x";
+//
+//                canvas.setGridCell(setLine, setCell, turnSelect);
+//                canvas.showGrid();
+//            }
+//        }
     }
 }

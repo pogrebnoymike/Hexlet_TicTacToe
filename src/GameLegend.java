@@ -4,30 +4,29 @@
  * Time: 7:48 AM
  */
 
-public class GameGrid {
+public class GameLegend {
     private static final int GRID_SIZE = 3;
-    private static char DEFAULT_SYMBOL = 'x';
-    private char[][] GridArray;
+    private String[][] GridArray;
 
-    public char getGridCell(int x, int y) {
+    public String getGridCell(int x, int y) {
         return GridArray[x][y];
     }
 
-    public void setGridCell(int x, int y, char cellValue) {
+    public void setGridCell(int x, int y, String cellValue) {
         GridArray[x][y] = cellValue;
     }
 
-    public GameGrid() {
+    public GameLegend() {
         this(GRID_SIZE);
     }
 
-    public GameGrid(int gridSize) {
+    public GameLegend(int gridSize) {
         int cellIndex = 1;
-        GridArray = new char[gridSize][gridSize];
+        GridArray = new String[gridSize][gridSize];
         for (int l = 0; l < gridSize; l++) {
             for (int c = 0; c < gridSize; c++) {
 //                GridArray[l][c] = (char) cellIndex;
-                GridArray[l][c] = Character.forDigit(cellIndex, 10);
+                GridArray[l][c] = Integer.toString(cellIndex);
 //                GridArray[l][c] = DEFAULT_SYMBOL;
                 cellIndex++;
             }
@@ -41,9 +40,12 @@ public class GameGrid {
 
         for (int sg = 0; sg < GridArray.length; sg++) {
             showLine(sg);
-            if (sg < 2) {
-                System.out.println("--- --- ---");
+            if (sg < GridArray.length - 1) {
+                for (String[] ignored : GridArray) {
+                    System.out.print("---- ");
+                }
             }
+            System.out.println();
         }
 
         System.out.println("----------------------------------------------");
@@ -51,18 +53,12 @@ public class GameGrid {
 
     private void showLine(int lineToShow) {
         for (int lt = 0; lt < GridArray.length; lt++) {
-            String start = "";
-            String end = "";
-            switch(lt){
-                case 0:
-                    start = " ";
-                    end = " | ";
-                    break;
-                case 1:
-                    end = " | ";
-                    break;
+            String end = "|";
+            if (lt == GridArray.length - 1) {
+                end = "";
             }
-            System.out.print(start + GridArray[lineToShow][lt] + end);
+
+            System.out.format(" %-3s%s", GridArray[lineToShow][lt], end);
         }
         System.out.println();
     }

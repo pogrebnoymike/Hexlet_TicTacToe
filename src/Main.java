@@ -28,6 +28,10 @@ public class Main {
         int turn = 0;
         String turnSelect = "x";
 
+        System.out.println("Player 1, your turn ... ");
+        GamePlay move = new GamePlay();
+        move.setPlayerChoices(scanner.nextLine());
+        System.out.println(move.getPlayerChoices());
 //        for (int setLine = 0; setLine < GRID_SIZE; setLine++) {
 //            for (int setCell = 0; setCell < GRID_SIZE; setCell++) {
 //                System.out.println(Players[turn] + ", your turn.");

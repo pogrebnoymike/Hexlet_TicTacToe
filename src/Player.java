@@ -6,6 +6,7 @@
 
 public class Player {
     private String playerName = "player";
+    public GamePlay Choices;
 
     public String getPlayerName() {
         return playerName;
@@ -14,4 +15,5 @@ public class Player {
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
+
 }
